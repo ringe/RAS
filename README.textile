@@ -1,17 +1,19 @@
-= RAS blog =
+h1. RAS blog
 
-This is a simple obligatory PHP student project. We've tried to create a blog 
+p. This is a simple obligatory PHP student project. We've tried to create a blog 
 based on the MVC principle, partly inspired by Ruby on Rails.
 
-== External components ==
+h2. External components
 
-We've used TinyMCE, Prototype, Scriptaculous and Smarty.
+p. We've used TinyMCE, Prototype, Scriptaculous and Smarty.
 
-== Pretty URLs ==
-The .htaccess or nginx rewrite rules are necessary to get pretty URLs.
+h2. Pretty URLs
 
-== nginx rewrite rules ==
-        location / {
+p. The .htaccess or nginx rewrite rules are necessary to get pretty URLs.
+
+h2. nginx rewrite rules
+
+bc..        location / {
           rewrite  ^(.*)$  /index.php?url=$1  last;
           break;
         }
