@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone='yes'?>
+<settings>
+	<database>
+		<name>dbname</name>
+		<user>dbuser</user>
+		<password>dbpassword</password>
+		<host>dbhost</host>
+	</database>
+</settings>

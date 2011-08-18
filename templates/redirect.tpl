@@ -1,0 +1,1 @@
+<script type='text/javascript'>location.href='{url link=$redirect_url}'</script>

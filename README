@@ -1,0 +1,27 @@
+= RAS blog =
+
+This is a simple obligatory PHP student project. We've tried to create a blog 
+based on the MVC principle, partly inspired by Ruby on Rails.
+
+== External components ==
+
+We've used TinyMCE, Prototype, Scriptaculous and Smarty.
+
+== Pretty URLs ==
+The .htaccess or nginx rewrite rules are necessary to get pretty URLs.
+
+== nginx rewrite rules ==
+        location / {
+          rewrite  ^(.*)$  /index.php?url=$1  last;
+          break;
+        }
+
+        location ^~ /index.php/ {
+        }
+
+        location ~* (robots\.txt|images|javascript|css|phpinfo) {
+        }
+
+== Copyright ==
+
+Copyright &copy; 2011 RAS developers

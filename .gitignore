@@ -1,0 +1,8 @@
+# Ignore templates cache
+templates_c
+# Don't publish the settings file
+settings.xml
+# Don't publish uploads
+uploads
+# Don't publish search index
+index

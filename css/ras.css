@@ -1,0 +1,438 @@
+/*  Inspiration:
+    http://www.alistapart.com/articles/forward-thinking-form-validation/
+    http://oli.jp/2009/html5-structure3/
+*/
+
+#todo {
+	background: white;
+	text-align: center;
+	color: red;
+	padding: 1em;
+}
+#todo ul {
+	list-style: none;
+}
+
+/* Main HTML elements */
+body {
+	background: rgb(2,77,102);
+	margin: 0;
+	padding: 0;
+}
+
+header#site {
+	height: 200px;
+}
+
+div#logo {
+	padding: 80px;
+	padding-bottom: 0;
+}
+
+/* Menu */
+#menu { 
+	margin:40px 0 0 150px;
+}
+
+#menu ul { 
+	list-style:none;
+	margin-right: 100px;
+	padding: 0; margin: 0;
+}
+
+#menu ul li {
+	float:right; 
+}
+
+#menu ul li a {
+	background-color: rgba(2, 78, 104, 0.3); 
+	text-decoration: none;
+	font: bold 14px Helvetica, Sans-Serif;
+	letter-spacing: -1px;
+	color: #402e16;
+  text-shadow: #eee 0px 0px 2px;
+  display: block;
+  padding: 20px 15px;
+}
+
+#menu ul li:first-child a {
+	-webkit-border-top-right-radius:12px; 
+}
+
+#menu ul li a:hover {             /*rgb(155, 237, 0)rgb*/
+	-webkit-box-shadow: 0 -5px 10px #777;
+   background: -webkit-gradient( linear, right bottom, left top, color-stop(0, rgb(199, 246, 111)), color-stop(0.72, rgb(101, 154, 0))) !important;
+   background-color:rgb(155, 237, 0) !important;
+}
+ 
+/* another RGBA background, now with an opacity of 0.8 */
+#menu ul li a.active { 
+	background: rgba(255,138,30,0.8) !important; 
+}
+
+#menu ul li:last-child a { 
+	-webkit-border-top-left-radius:12px; 
+}
+
+/* submenu */
+#menu ul li ul { position: absolute; display: none;}
+#menu ul li:hover ul { display: block;}
+#menu ul li ul li { float: none; position: static; }
+#menu ul li ul li:first-child a, #menu ul li ul li:last-child a { -webkit-border-radius: 0; }
+
+
+/* Layout styling */
+div#background {
+	background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, rgb(58, 170, 207)),
+    color-stop(0.7, rgb(2,77,102))
+	);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+div#content, header#site, footer {
+	margin: 0 auto;
+	width: 900px;
+}
+
+div#content {
+	background-color: rgb(97, 180, 207); 
+	border-radius: 25px;
+	padding: 1em;
+	padding-top: 2.5em;
+  clear:both;
+}
+
+div#errors {
+	background: red;
+	text-align: center;
+}
+
+footer {
+  text-align: center;
+	font-size: 0.7em;
+}
+
+/* Archive */
+section#archive {
+  padding-top: 0;
+  text-align: center;
+}
+
+section#archive article {
+	-webkit-border-radius:12px;
+	margin: 25px;
+  padding: 1em 2em;
+  float: left;
+  box-shadow: #eee 0px 0px 9px;
+}
+
+/* Posts */
+#posts article, article#post {
+	background-color: rgb(33, 98, 120); 
+	-webkit-border-top-right-radius:12px;
+	-webkit-border-top-left-radius:12px;
+	margin: 0 auto;
+	margin-bottom: 25px;
+	width: 800px;
+  padding: 1em;
+  padding-left: 2em;
+  border-bottom: solid 1px;
+  box-shadow: #eee 0px 0px 9px;
+}
+
+#posts article h1, article#post h1 {
+  color: rgb(2, 29, 70); 
+  font-family: Lobster;
+  margin-bottom: 0;
+  padding-bottom: 0;
+	text-shadow: 2px 2px 10px rgb(81, 180, 160);
+}
+
+article#post header h1 {
+  font-size: 50px;
+}
+
+#posts article h1 a {
+  color: rgb(2, 29, 70);
+  text-decoration: none;
+}
+
+#posts article header h2, article#post header h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  border-top: solid 1px;
+}
+
+#posts article h3 {
+  font-size: 12px;
+  color: rgb(81, 180, 160); 
+}
+
+#comments ul {
+	list-style: none;
+  padding: 0;
+}
+
+#comments ul li h3 {
+	cursor: pointer;
+}
+
+#comments ul li h3 span {
+} 
+
+#comments ul li div {
+	background-color: rgba(45, 180, 153, 0.3);
+  padding: 0.5em 2em;
+  margin: 0.2em;
+  -webkit-border-radius: 20px;
+  -webkit-border-bottom-right-radius: 20px;
+}
+
+#post #attachments {
+  background-color: rgb(0, 104, 84);
+	-webkit-box-shadow: 0 5px 10px #777;
+  float: right;
+  margin-top: -1em;
+  padding: 2em;
+	-webkit-border-bottom-right-radius:25px;
+	-webkit-border-bottom-left-radius:25px;
+  text-align: center;
+  width: 200px;
+}
+
+#post #attachments h2 {
+  color: rgb(45, 180, 153);
+  margin: 0;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+#post #attachments ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#post #attachments a {
+  background-color: rgb(209, 167, 94); 
+	-webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 2px;
+  line-height: 30px;
+  padding: 0 10px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+/* Forms in general */
+fieldset {
+  padding: 20px;
+  border: none;
+  margin: 0 auto;
+  border-top: 1px solid white;
+}
+
+legend {
+	font-family: Over the Rainbow;
+	text-align: center;
+	font-size: 30px;
+	color: white;
+}
+
+label {
+	font-family: Over the Rainbow;
+	width: 100px;
+  text-align: right;
+  padding-right: 15px;
+  line-height: 30px;
+  font-size: 15px;
+}
+
+input {
+  font-size: 20px;
+}
+
+input[type='submit'] {
+	font-family: Over the Rainbow;
+  float: right;
+  margin-top: 15px;
+  padding: 0 1em;
+}
+
+fieldset.float label {
+	float:left;
+}
+
+/* Search form */
+#search {
+  text-align: center;
+}
+
+#search input {
+	line-height: 38px;
+  padding: 0 0.5em;
+}
+
+#search input[type='submit'] {
+	padding: 0 2em;
+  float: none;
+}
+
+#hits div {
+	padding: 0 5em;
+}
+
+#hits h1 {
+	font-family: Over the Rainbow;
+	text-align: center;
+	margin:0;
+}
+
+#hits h1 a {
+	color: rgb(2, 29, 70);
+}
+
+#hits h2 {
+	font-family: Lobster;
+	margin: 0;
+	margin-top: 15px;
+	padding:0;
+	font-size: 20px;
+}
+
+#hits p {
+	margin:0;
+	border-bottom: 1px solid;
+}
+
+#hits a {
+	text-decoration: none;
+}
+
+#hits ul {
+	list-style: none;
+	padding:0;
+}
+
+/* activation form */
+.activation input[type='text'] {
+  text-align: center;
+}
+
+.activation input[type='submit'] {
+  float: none;
+}
+
+/* upload form */
+#uploadform{
+	text-align: center;
+	padding-bottom: 3em;
+	
+}
+
+#uploadform p{
+	text-align: center;
+	font-size: 22px;
+}
+
+#uploadform div{
+	padding: 3em;
+}
+
+#uploadform select{
+	font-size: 28px;
+	
+}
+
+
+/* Userform */
+#userform {
+  text-align: center;
+  padding-top: 50px;
+}
+
+#userform form {
+  text-align: left;
+}
+
+#userform fieldset {
+	width: 500px;
+}
+
+#userform legend {
+}
+
+#userform label {
+  width: 150px;
+}
+
+#userform input:invalid {
+    background: red;
+}
+
+#userform a {
+  font-family: 'Over the Rainbow';
+  text-decoration: none;
+}
+
+
+/* Post form */
+#postform input[name='title'], #postform input[name='tags']{
+    width: 600px;
+}
+
+#postform form {
+	width: 800px;
+  margin: 0 auto;
+}
+
+/* Comment form */
+#commentform fieldset {
+  width: 740px;
+  text-align: center;
+}
+
+#commentform legend {
+	font-size: 20px;
+}
+
+/* Pretty 404 */
+#fourohfour {
+	width: 500px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 6em;
+}
+
+#fourohfour h1 {
+	-webkit-transform: rotate(-15deg);
+	margin-bottom: 2em;
+	font-size: 4em;
+	font-family: 'Bangers';
+	text-shadow: -2px 2px 10px rgba(0,0,0,.5);
+}
+
+#fourohfour p {
+	font-family: 'Over the Rainbow';
+	font-weight: 'bold';
+	font-size: 2em;
+}
+
+#fourohfour a {
+	font-family: 'Cabin Sketch';
+	text-decoration: none;
+}
+
+/* Helper styling */
+.stopFloat {
+  clear: both;
+}
