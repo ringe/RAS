@@ -3,6 +3,8 @@ h1. RAS blog
 p. This is a simple obligatory PHP student project. We've tried to create a blog 
 based on the MVC principle, partly inspired by Ruby on Rails.
 
+!http://www.gnu.org/graphics/agplv3-88x31.png!
+
 h3. External components
 
 p. We've used TinyMCE, Prototype, Scriptaculous and Smarty.
@@ -26,4 +28,17 @@ bc..        location / {
 
 h1. Copyright
 
-Copyright &copy; 2011 RAS developers
+Copyright &copy; 2011 "ringe":github.com/ringe, "alewol":github.com/alewol, "gitsme":github.com/gitsme
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as 
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
